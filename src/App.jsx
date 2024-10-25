@@ -17,10 +17,14 @@ function App() {
   setBookmarks (newBookmarks)    
   }
 
-  const handleMarkAsRead = time => {
-  setReadingTime(redingTime + time)    
-  }
+  const handleMarkAsRead = (id, time) => {
+  setReadingTime(redingTime + time)
+  // remove the read blog form bookmark
+// console. log('remove bookmark' , id)
 
+  const reaminingBookmarks = bookmarks.filter(bookmark => bookmark.id !==id); setBookmarks(reaminingBookmarks);
+
+  }
 
   return (
     <>
